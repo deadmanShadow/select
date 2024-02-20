@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Simple Option Button</title>
+  </head>
+  <body>
+    <!-- first select option -->
+    <!-- in the first select option, if users press the YES button then "second select option" will be automatically enable -->
+    <select
+      id="enabledButtonAfter"
+      onchange="enableSecondButtonOG()"
+      class="select select-primary w-full mt-20 max-w-xs"
+    >
+      <option>First Select Option</option>
+      <option value="yes">YES</option>
+      <option>NO</option>
+    </select>
+
+    <!-- second select option   -->
+    <!-- in the second select option, depends on "first select option" behavior-->
+    <select
+      select
+      disabled
+      id="secondButtonAfter"
+      class="select select-primary w-full mt-20 max-w-xs"
+    >
+      <option>Second Select Option</option>
+      <option value="yes">YES</option>
+      <option value="no">NO</option>
+    </select>
+  </body>
+  <script src="/script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</html>
